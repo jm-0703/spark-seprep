@@ -26,9 +26,7 @@ Create a `Containerfile` with configuration similar to this:
 
 ```Dockerfile
 FROM python:latest
-WORKDIR /opt/app-root/bin
 RUN pip install --upgrade jupyterlab 
-WORKDIR /opt/app-root/src
 CMD ["jupyter", "lab", "--port=8888", "--allow_origin=*", "--ip="]
 ```
 
