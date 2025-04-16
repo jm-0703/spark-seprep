@@ -27,7 +27,7 @@ Create a `Containerfile` with configuration similar to this:
 ```Dockerfile
 FROM python:latest
 RUN pip install --upgrade jupyterlab 
-CMD ["jupyter", "lab", "--port=8888", "--allow_origin=*", "--allow-root", "--ip="]
+CMD ["jupyter", "lab", "--port=8888", "--allow_origin=*", "--allow-root", "--ip=0.0.0.0"]
 ```
 
 Note: Make sure the port you are setting in CMD matches the port needed by your Jupyter notebook. You will also need to add a **requirements.txt** file during the image build process to install any requirements that your Jupyter notebook has.
